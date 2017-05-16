@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 int month=Integer.parseInt(original.substring(3,5));
                 int day=Integer.parseInt(original.substring(6,8));
 
-                Toast.makeText(getApplicationContext(), tempdate, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), tempdate, Toast.LENGTH_LONG).show();
                 tempmemo=memobook.get(memofinder(tempdate));
 
                 dategetter.init(year, month-1, day, new DatePicker.OnDateChangedListener() {
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 //일단 추가기능만 구현
                 String date = dategetter.getYear() + "년" + (dategetter.getMonth() + 1) + "월" + dategetter.getDayOfMonth() + "일";
                 date = SirSlicer(date);
-                Toast.makeText(getApplicationContext(), date, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), date, Toast.LENGTH_LONG).show();
                 String memo = memogetter.getText().toString();
 
                 if(memochecker(date)){
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
                 //일단 추가기능만 구현
                 String date = dategetter.getYear() + "년" + (dategetter.getMonth() + 1) + "월" + dategetter.getDayOfMonth() + "일";
                 date = SirSlicer(date);
-                Toast.makeText(getApplicationContext(), date + "이겁니다", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), date + "이겁니다", Toast.LENGTH_LONG).show();
                 String memo = memogetter.getText().toString();
 
                 databox.datastore(date, memo);
